@@ -9,21 +9,23 @@ const Counter: React.FC = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="flex flex-col items-center space-y-4">
-      <div className="flex space-x-4">
-        <button
-          onClick={() => dispatch(decrement())}
-          className="px-4 py-2 bg-red-500 text-white rounded"
-        >
-          -
-        </button>
-        <span className="text-2xl font-bold">{count}</span>
-        <button
-          onClick={() => dispatch(increment())}
-          className="px-4 py-2 bg-green-500 text-white rounded"
-        >
-          +
-        </button>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="flex flex-col items-center space-y-6">
+        <div className="flex space-x-6">
+          <button
+            onClick={() => dispatch(decrement())}
+            className="px-6 py-4 bg-red-600 text-white text-3xl font-bold rounded hover:bg-red-700 transition"
+          >
+            -
+          </button>
+          <span className="text-5xl font-extrabold">{count}</span>
+          <button
+            onClick={() => dispatch(increment())}
+            className="px-6 py-4 bg-green-600 text-white text-3xl font-bold rounded hover:bg-green-700 transition"
+          >
+            +
+          </button>
+        </div>
       </div>
     </div>
   );
